@@ -24,9 +24,8 @@ set(XCORE_SDK_ROOT ${PROJECT_SOURCE_DIR} CACHE STRING "Root folder of xcore_sdk 
 add_subdirectory(modules)
 
 ## Add top level project targets
-if(PROJECT_IS_TOP_LEVEL)
-    include(examples/examples.cmake)
-endif()
+include(Smart_Baby_monitor))
+
 
 if(XCORE_SDK_TESTS)
     include(test/tests.cmake)
