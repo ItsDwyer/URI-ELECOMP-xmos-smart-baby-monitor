@@ -1,0 +1,34 @@
+# Editor cruft
+**/.vscode/
+
+# Build cruft
+**/build*/
+**/_build*/
+**/bin*/
+**/dist*/
+**/fatfs_mkimage
+
+# Build & debug cruft
+*.a
+*.vcd
+*.gtkw
+
+# Filesystem cruft
+*.fs
+**/flash_bin_node0
+filesystem_support/fw-*
+filesystem_support/spanning-xn*
+filesystem_support/target-xn*
+
+# Python cruft
+**/.python-version
+**/*.pyc
+**/__pycache__/*
+
+# test cruft
+**/test_*.log
+
+# macOS cruft
+.DS_Store
+
+**/*.swp
