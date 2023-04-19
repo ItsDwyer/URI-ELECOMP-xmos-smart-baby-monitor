@@ -1,5 +1,5 @@
 {
-    "title": "XCORE Software Development Kit",
-    "project": "xcore_sdk",
-    "version": "0.11.0"
+    "title": "ELECOMP XMOS Smart Baby Monitor",
+    "project": "XMOS_Smart_Baby_Monitor",
+    "version": "0.1.5"
 }

@@ -1,30 +1,28 @@
 import paho.mqtt.client as mqtt
 
-import ssl
 
-# import configparser
+MQTT_SERVER = "Localhost"
+MQTT_PORT = 8883
 
-# config = configparser.ConfigParser()
-# config.read('../app_config.h') //gave up on this
-# hostname = config.get()
+MQTT_TOPIC = "explorer/mics"
 
-def on_message(client, userdata, message):
-    print (message.payload) #Print audio data for test
+TLS_CERT = "mqtt_broker_certs/client.crt"
+TLS_KEY = "mqtt_broker_certs/client.key"
+TLS_CA_CERTS ="mqtt_broker_certs/ca.crt"
 
-client = mqtt.Client()
+OUTPUT_FILE = "output.wav"
 
-client.tls_set(
-                ca_certs="mqtt_broker_certs/ca.crt",
-                certfile="mqtt_broker_certs/client.crt",
-                keyfile="mqtt_broker_certs/client.key",
-                cert_reqs=ssl.CERT_NONE,
-                tls_version=ssl.PROTOCOL_TLSv1_2
-            )
+with open(OUTPUT_FILE, "wb") as f: #wb is used instead of w
 
-client.on_message = on_message
+    def on_message(client, userdata, message):
+        f.write(message.payload.decode() + "\n")
+        f.flush() #ensure all data makes it in the file?
 
-client.connect("localhost", 8883, 60)
+    client = mqtt.Client()
+    client.tls_set(TLS_CA_CERTS, certfile=TLS_CERT, keyfile=TLS_KEY)
 
-client.subscribe("explorer/mics")
+    client.on_message = on_message
+    client.connect(MQTT_SERVER, MQTT_PORT)
 
-client.loop_forever
+    client.subscribe(MQTT_TOPIC, qos=1)
+    client.loop_forever()
