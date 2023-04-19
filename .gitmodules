@@ -1,0 +1,21 @@
+[submodule "lib_src"]
+	path = modules/sample_rate_conversion/lib_src
+	url = git@github.com:xmos/lib_src.git
+[submodule "xmos_cmake_toolchain"]
+	path = xmos_cmake_toolchain
+	url = git@github.com:xmos/xmos_cmake_toolchain.git
+[submodule "avona"]
+	path = modules/voice
+	url = git@github.com:xmos/sw_avona.git
+[submodule "frameworks/core"]
+	path = modules/core
+	url = git@github.com:xmos/fwk_core.git
+[submodule "frameworks/io"]
+	path = modules/io
+	url = git@github.com:xmos/fwk_io.git
+[submodule "frameworks/rtos"]
+	path = modules/rtos
+	url = git@github.com:xmos/fwk_rtos.git
+[submodule "modules/xscope_fileio/xscope_fileio"]
+	path = modules/xscope_fileio/xscope_fileio
+	url = git@github.com:xmos/xscope_fileio.git
