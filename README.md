@@ -1,4 +1,6 @@
-# XCORE:registered: SDK Repository
+# The bulk of this code was cloned from the XCORE:registered: SDK Repository which will have it's readme below
+
+The purpose of this repo is to have a slimmed down version of the programs used to create the Smart Baby Monitor example. This repo is not created by a software or computer engineer but rather an electrical engineer who had a little bit of cs experience in high school. As such, it is expected that the codes from this repo be taken with a grain of salt and used to create and expand the other repos that is created by professionals at XMOS who have cs experience in college or otherwise. It is recommended that any code copied from this repo is read over thoroughly for strange fixes that can be done with simpler solutions. 
 
 [![Version](https://img.shields.io/github/v/release/xmos/xcore_sdk?include_prereleases)](https://github.com/xmos/xcore_sdk/releases/latest)
 [![Issues](https://img.shields.io/github/issues/xmos/xcore_sdk)](https://github.com/xmos/xcore_sdk/issues)
